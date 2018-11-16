@@ -25,26 +25,33 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>FMODGMS_Sys_Create();
+            <string>ini_open("path.ini");
+WORKING_DIR=ini_read_string("Config","path", string_replace_all(working_directory,"\","/"));
+ini_close();
+
+FMODGMS_Sys_Create();
 FMODGMS_Sys_Initialize(32);  
 instance_create(x,y,oMouse);
 steps=0;
 //Load
 song=get_string("Name of Song:","")
-ini_open(working_directory+"\Songs"+"\"+song+"\"+song+".ini");
+while(!sk_fileCopy(WORKING_DIR+"Songs"+"/"+song+"/"+song+".ini", "temp.ini") ){
+    song=get_string("Song not found. Please re-enter name of song:","");
+}
+ini_open("temp.ini");
 //ini_open("BS2.ini");
-instance=0
-songname=ini_read_string("General","Name","")
-author=ini_read_string("General","author","")
-artist=ini_read_string("General","artist","")
-global.songoffset=ini_read_string("Load","songoffset","")
-global.bg=background_add(ini_read_string("Load","background",""),false,false)
-bgname=ini_read_string("Load","backgroundname","")
-filename=ini_read_string("General","mp3","")
+instance=0;
+songname=ini_read_string("General","Name","");
+author=ini_read_string("General","author","");
+artist=ini_read_string("General","artist","");
+global.songoffset=ini_read_string("Load","songoffset","");
+global.bg=background_add(ini_read_string("Load","background",""),false,false);
+bgname=ini_read_string("Load","backgroundname","");
+filename=WORKING_DIR+"Songs"+"/"+song+"/"+ini_read_string("General","mp3","");
 FMODGMS_Snd_LoadSound(filename);
 channel = FMODGMS_Chan_CreateChannel();
 FMODGMS_Snd_PlaySound(filename,channel);
-sd=working_directory+string("/Songs/")
+sd=WORKING_DIR+string("/Songs/")
 //file=get_open_filename_ext("|",filename,working_directory+string("\Songs\"+songname+"\"+filename),"Open Your Music File")
 //musicfile=get_open_filename("All Files (*.*)|*.*","");
 

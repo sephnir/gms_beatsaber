@@ -3,7 +3,7 @@
   <Configs name="configs">
     <Config>Configs\Default</Config>
   </Configs>
-  <datafiles number="1" name="datafiles">
+  <datafiles number="4" name="datafiles">
     <datafile>
       <name>BS2.ini</name>
       <exists>-1</exists>
@@ -20,6 +20,40 @@
         </Config>
       </ConfigOptions>
       <filename>BS2.ini</filename>
+    </datafile>
+    <datafile>
+      <name>path.ini</name>
+      <exists>-1</exists>
+      <size>68</size>
+      <exportAction>2</exportAction>
+      <exportDir></exportDir>
+      <overwrite>0</overwrite>
+      <freeData>-1</freeData>
+      <removeEnd>0</removeEnd>
+      <store>0</store>
+      <ConfigOptions>
+        <Config name="Default">
+          <CopyToMask>9223372036854775807</CopyToMask>
+        </Config>
+      </ConfigOptions>
+      <filename>path.ini</filename>
+    </datafile>
+    <datafile>
+      <name>temp.ini</name>
+      <exists>-1</exists>
+      <size>68</size>
+      <exportAction>2</exportAction>
+      <exportDir></exportDir>
+      <overwrite>0</overwrite>
+      <freeData>-1</freeData>
+      <removeEnd>0</removeEnd>
+      <store>0</store>
+      <ConfigOptions>
+        <Config name="Default">
+          <CopyToMask>9223372036854775807</CopyToMask>
+        </Config>
+      </ConfigOptions>
+      <filename>temp.ini</filename>
     </datafile>
   </datafiles>
   <NewExtensions>
@@ -53,6 +87,7 @@
     <object>objects\oController</object>
     <object>objects\oParticle</object>
     <object>objects\oNote</object>
+    <object>objects\obj_FCI_example</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room0</room>
