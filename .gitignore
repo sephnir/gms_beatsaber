@@ -1,3 +1,7 @@
 #Path.ini stores the absolute path of the directory that contains the "Songs" folder
 #Change it accordingly to where your song folder is located
-datafiles/path.ini
+#Format:
+#[Config]
+#path=C:/(Insert the directory that contains the 'Songs' folder. Use forward slash.)
+
+/datafiles/path.ini
