@@ -1,3 +1,3 @@
 #Path.ini stores the absolute path of the directory that contains the "Songs" folder
 #Change it accordingly to where your song folder is located
-path.ini
+datafiles/path.ini
