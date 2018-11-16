@@ -87,7 +87,6 @@
     <object>objects\oController</object>
     <object>objects\oParticle</object>
     <object>objects\oNote</object>
-    <object>objects\obj_FCI_example</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room0</room>
