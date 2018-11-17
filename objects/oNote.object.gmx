@@ -29,6 +29,7 @@
 image_alpha = 0;
 scale = 0;
 spd = 2.5;
+image_speed = 0;
 </string>
           </argument>
         </arguments>
@@ -62,6 +63,7 @@ for (i=0;i&lt;ww;i+=chunk) { //we loop 4 pixel at a time all the way across
  for (j=0;j&lt;hh;j+=chunk) { //while picking all the vertical pixels in each column
  particle = instance_create(x+i,y+j,oParticle); //we create a particle relative to the object, offset by the proper amount
  particle.spr = sprite_index; //we need to tell the particle which sprite to draw. in this case, it's drawing the sprite of the object that's creating it
+ particle.imgindex = image_index;
  particle.size = chunk;
  if rot = 0{
     particle.direction = random_range(45,135);

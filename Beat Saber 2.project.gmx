@@ -66,6 +66,8 @@
   </sounds>
   <sprites name="sprites">
     <sprite>sprites\sMouseMask</sprite>
+    <sprite>sprites\sButtons</sprite>
+    <sprite>sprites\sScrollbar</sprite>
     <sprite>sprites\sNote</sprite>
   </sprites>
   <backgrounds name="background">
@@ -85,10 +87,13 @@
     <object>objects\oMouse</object>
     <object>objects\oNoteLine</object>
     <object>objects\oController</object>
+    <object>objects\oEditButtons</object>
+    <object>objects\oControllerEditor</object>
     <object>objects\oParticle</object>
     <object>objects\oNote</object>
   </objects>
   <rooms name="rooms">
+    <room>rooms\rmEditor</room>
     <room>rooms\room0</room>
   </rooms>
   <help>

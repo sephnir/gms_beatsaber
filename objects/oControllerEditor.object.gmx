@@ -25,7 +25,19 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>ini_open("path.ini");
+            <string>//UI BUTTONS
+var btp,btr,btf,bts; //(btp = playbutton; btr = rewind; btf = forward; bts = slider)
+btr = instance_create(0,0,oEditButtons);
+btr.bttype = 2;
+bts = instance_create(x+32,0,oEditButtons);
+bts.bttype = 0;
+btf = instance_create(x+64,0,oEditButtons);
+btf.bttype = 3;
+bts = instance_create(x+106,0,oEditButtons);
+bts.bttype = 4;
+
+
+ini_open("path.ini");
 WORKING_DIR=ini_read_string("Config","path", string_replace_all(working_directory,"\","/"));
 ini_close();
 
@@ -48,6 +60,7 @@ global.songoffset=ini_read_string("Load","songoffset","");
 global.bg=background_add(ini_read_string("Load","background",""),false,false);
 bgname=ini_read_string("Load","backgroundname","");
 filename=WORKING_DIR+"Songs"+"/"+song+"/"+ini_read_string("General","mp3","");
+songlength=FMODGMS_Snd_Get_Length(filename);
 FMODGMS_Snd_LoadSound(filename);
 channel = FMODGMS_Chan_CreateChannel();
 FMODGMS_Snd_PlaySound(filename,channel);
@@ -114,6 +127,7 @@ if mouse_check_button(mb_left) &amp;&amp; oMouse.x &lt; oMouse.xprevious-10 &amp
 }
 //Step Counter
 steps+=1;
+/*
 var note;
     if ini_read_real("Notes","n"+string(self.steps)+"-1",0){
         note = instance_create(oNoteSpawner.x,oNoteSpawner.y,oNote);
@@ -121,11 +135,11 @@ var note;
         note.image_index = 0;
     }
     if ini_read_real("Notes","n"+string(self.steps)+"-2",0){
-        note = instance_create(oNoteSpawner.x+128,oNoteSpawner.y,oNote);
+        note = instance_create(oNoteSpawner.x+36,oNoteSpawner.y,oNote);
         note.rot = ini_read_real("Notes","n"+string(self.steps)+"-2","");
         note.image_index = 1;
     }
-
+*/
     
 </string>
           </argument>
@@ -152,7 +166,8 @@ var note;
             <string>draw_set_font(fntHUD);
 draw_text(x,y,"Steps: " + string(steps));
 draw_text(x,y+50,"Song: " + string(songname));
-draw_text(x,y+100,"MP3: " + string(filename));
+draw_sprite(sScrollbar,0,0,0);
+
 </string>
           </argument>
         </arguments>
