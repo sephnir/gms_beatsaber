@@ -3,7 +3,7 @@
   <Configs name="configs">
     <Config>Configs\Default</Config>
   </Configs>
-  <datafiles number="4" name="datafiles">
+  <datafiles number="5" name="datafiles">
     <datafile>
       <name>BS2.ini</name>
       <exists>-1</exists>
@@ -55,6 +55,23 @@
       </ConfigOptions>
       <filename>temp.ini</filename>
     </datafile>
+    <datafile>
+      <name>Cytus_Halcyon_-_xi__Full_version_.mp3</name>
+      <exists>-1</exists>
+      <size>7330305</size>
+      <exportAction>2</exportAction>
+      <exportDir></exportDir>
+      <overwrite>0</overwrite>
+      <freeData>-1</freeData>
+      <removeEnd>0</removeEnd>
+      <store>0</store>
+      <ConfigOptions>
+        <Config name="Default">
+          <CopyToMask>105553895358702</CopyToMask>
+        </Config>
+      </ConfigOptions>
+      <filename>Cytus_Halcyon_-_xi__Full_version_.mp3</filename>
+    </datafile>
   </datafiles>
   <NewExtensions>
     <extension index="0">extensions\sandbox_killer</extension>
@@ -63,10 +80,12 @@
   <sounds name="sound">
     <sound>sound\sndHit</sound>
     <sound>sound\sndSwipe</sound>
+    <sound>sound\Halcyon</sound>
   </sounds>
   <sprites name="sprites">
     <sprite>sprites\sMouseMask</sprite>
     <sprite>sprites\sButtons</sprite>
+    <sprite>sprites\sScroll</sprite>
     <sprite>sprites\sScrollbar</sprite>
     <sprite>sprites\sNote</sprite>
   </sprites>
@@ -87,8 +106,8 @@
     <object>objects\oMouse</object>
     <object>objects\oNoteLine</object>
     <object>objects\oController</object>
-    <object>objects\oEditButtons</object>
     <object>objects\oControllerEditor</object>
+    <object>objects\oEditButtons</object>
     <object>objects\oParticle</object>
     <object>objects\oNote</object>
   </objects>
